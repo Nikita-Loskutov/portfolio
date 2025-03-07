@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
 }
 
 html, body {
@@ -207,16 +208,60 @@ nav:hover a:hover {
     box-shadow: 0 2px 0 0 currentColor;
 }
 
-
-
-
-
-
 .left {
     margin-top: 10%;
     margin-left: 8%;
+    opacity: 0;
+    transform: translateY(150px);
+    animation: slideUp 1s forwards 3.5s;
 }
 
+.left .devlop span:nth-child(1) {
+    transform: translateY(150px);
+    opacity: 0;
+    animation: slideUp 1s forwards 3.6s;
+}
+
+.left .devlop span:nth-child(2) {
+    transform: translateY(150px);
+    opacity: 0;
+    animation: slideUp 1s forwards 3.7s;
+}
+
+.left .discript {
+    transform: translateY(150px);
+    opacity: 0;
+    animation: slideUp 1s forwards 3.8s;
+}
+
+.left .language {
+    transform: translateY(150px);
+    opacity: 0;
+    animation: slideUp 1s forwards 3.9s;
+}
+
+.left .buttons {
+    transform: translateY(150px);
+    opacity: 0;
+    animation: slideUp 1s forwards 4s;
+}
+
+.left .plink {
+    transform: translateY(150px);
+    opacity: 0;
+    animation: slideUp 1s forwards 4.1s;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(150px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
 .devlop {
     display: flex;
@@ -296,4 +341,71 @@ nav:hover a:hover {
 
 .plink i {
     margin-right: 1.75%;
+}
+
+.second {
+    padding-top: 25%;
+}
+
+.about_me {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3%;
+}
+
+
+.information {
+    display: flex;
+    align-items: center;
+}
+
+.second h1 { 
+    font-size: 55px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(90deg, rgb(86, 69, 214) 0%, rgba(106,61,225,1) 35%, rgb(111, 39, 184) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 auto;
+}
+
+.about_info {
+    margin-left: 8%;
+    flex-direction: column;
+}
+
+.user_icon{
+    background: linear-gradient(90deg, rgba(29,29,29,1) 0%, rgba(69,69,69,1) 81%, rgba(94,94,94,1) 100%);
+    border: 5px solid rgba(112, 112, 112, 0.5);
+    border-radius: 360px;
+    width: 360px;
+    height: 360px;
+    margin-right: 8%;
+
+
+
+}
+
+.user_anonim {
+    width: 350px;
+    height: auto;
+
+
+}
+
+.name {
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background: linear-gradient(90deg, rgb(86, 69, 214) 0%, rgba(106,61,225,1) 35%, rgb(111, 39, 184) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 auto;
+}
+.discript_about{
+    max-width: 70%;
+    font-size: 30px;
+    color: #99a1af;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
 }
