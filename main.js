@@ -13,3 +13,33 @@ setTimeout(function() {
         fade_block.style.filter = "blur(0px)";
     }, 1500);
 }, 2500);
+
+// Получаем элементы
+const aboutMeTitle = document.querySelector(".about_me_title");
+const aboutInfoText = document.querySelectorAll(".about_info_text");
+const aboutInfoImage = document.querySelector(".about_info_image");
+
+// Функция для проверки видимости элемента
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// Функция для добавления класса анимации
+function checkAnimation() {
+    if (isElementInViewport(aboutMeTitle)) {
+        aboutMeTitle.classList.add("animate");
+        aboutInfoText.forEach(element => {
+            element.classList.add("animate");
+        });
+        aboutInfoImage.classList.add("animate");
+    }
+}
+
+// Проверка прокрутки и вызов функции
+window.addEventListener('scroll', checkAnimation);

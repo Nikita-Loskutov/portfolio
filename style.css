@@ -344,13 +344,13 @@ nav:hover a:hover {
 }
 
 .second {
-    padding-top: 25%;
+    padding-top: 20%;
 }
 
 .about_me {
     display: flex;
     justify-content: center;
-    padding-bottom: 3%;
+    padding-bottom: 2%;
 }
 
 
@@ -388,9 +388,8 @@ nav:hover a:hover {
 .user_anonim {
     width: 350px;
     height: auto;
-
-
 }
+
 
 .name {
     font-size: 40px;
@@ -407,5 +406,28 @@ nav:hover a:hover {
     color: #99a1af;
     margin-top: 15px;
     margin-bottom: 15px;
+    transform: translateX(-100px);
+
+}
+
+/* New animation styles */
+.about_me_title, .about_info_text, .about_info_image {
+    opacity: 0;
+    transition: all 1.0s ease;
+}
+
+.about_me_title.animate {
+    transform: translateY(-100px) scale(1.2);
+    opacity: 1;
+}
+
+.about_info_text.animate {
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+.about_info_image.animate {
+    transform: translateY(-50px);
+    opacity: 1;
 
 }
