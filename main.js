@@ -11,6 +11,8 @@ setTimeout(function() {
         main_block.style.opacity = "100%";
         fade_block.style.opacity = "0";
         fade_block.style.filter = "blur(0px)";
+        body.style.overflow = "auto"
+        body.style.background = "#100b38"
     }, 1500);
 }, 2500);
 
@@ -40,6 +42,17 @@ function checkAnimation() {
         aboutInfoImage.classList.add("animate");
     }
 }
-
 // Проверка прокрутки и вызов функции
-window.addEventListener('scroll', checkAnimation);
+window.addEventListener('scroll', checkAnimation); 
+
+
+const buttons = document.querySelectorAll('.show_button');
+// Добавляем к каждой кнопке обработчик события клика
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Убираем класс show_button_active у всех кнопок
+        buttons.forEach(btn => btn.classList.remove('show_button_active'));
+        // Добавляем класс show_button_active к нажатой кнопке
+        button.classList.add('show_button_active');
+    });
+});
