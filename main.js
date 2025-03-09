@@ -56,3 +56,110 @@ buttons.forEach(button => {
         button.classList.add('show_button_active');
     });
 });
+
+const projectButton = document.getElementById("project");
+const techStackButton = document.getElementById("techstack");
+const projectBlock = document.getElementById("project_block");
+const techStackBlock = document.getElementById("techstack_block");
+
+// Устанавливаем "Projects" активным по умолчанию
+projectBlock.classList.add("active");
+projectButton.classList.add("show_button_active");
+
+
+// Функция плавного переключения
+function switchSection(showBlock, hideBlock) {
+    hideBlock.classList.add("fade-out"); // Добавляем эффект исчезновения
+    setTimeout(() => {
+        hideBlock.classList.remove("active", "fade-out"); // Убираем активный класс
+        showBlock.classList.add("active"); // Показываем нужный блок
+    }, 400); // Длительность анимации в CSS
+}
+
+// Обработчики кликов с плавным переключением
+projectButton.addEventListener("click", () => {
+    switchSection(projectBlock, techStackBlock);
+    projectButton.classList.add("show_button_active");
+    techStackButton.classList.remove("show_button_active");
+});
+
+techStackButton.addEventListener("click", () => {
+    switchSection(techStackBlock, projectBlock);
+    techStackButton.classList.add("show_button_active");
+    projectButton.classList.remove("show_button_active");
+});
+
+// Получаем элементы showcase
+const showcaseTitle = document.querySelector(".portfolio_case");
+const showcaseProjects = document.querySelectorAll(".shproject .shpcart");
+const showcaseTechStack = document.querySelectorAll(".shtechstack .tscart");
+
+// Функция для проверки видимости
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// Функция для добавления анимации
+function checkShowcaseAnimation() {
+    if (isElementInViewport(showcaseTitle)) {
+        showcaseTitle.classList.add("animate");
+        showcaseProjects.forEach(item => item.classList.add("animate"));
+        showcaseTechStack.forEach(item => item.classList.add("animate"));
+    }
+}
+
+// Запуск при прокрутке
+window.addEventListener("scroll", checkShowcaseAnimation);
+
+
+// Получаем все секции и ссылки в навигации
+// Получаем секции и ссылки навигации
+const sections = document.querySelectorAll("main > div, footer");
+const navLinks = document.querySelectorAll("nav a");
+
+// Функция для определения активного раздела
+function activateNavLink() {
+    let currentSection = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+
+        if (window.scrollY >= sectionTop - sectionHeight / 3) {
+            currentSection = section.id;
+        }
+    });
+
+    // Удаляем активный класс у всех ссылок
+    navLinks.forEach(link => {
+        link.classList.remove("active-nav");
+        if (link.getAttribute("href") === `#${currentSection}`) {
+            link.classList.add("active-nav");
+        }
+    });
+}
+
+// Запускаем функцию при прокрутке
+window.addEventListener("scroll", activateNavLink);
+
+// Обработчик клика для плавного скролла
+navLinks.forEach(link => {
+    link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href").substring(1);
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+            window.scrollTo({
+                top: targetSection.offsetTop - 50, // Отступ сверху
+                behavior: "smooth"
+            });
+        }
+    });
+});
+

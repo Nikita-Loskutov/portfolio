@@ -156,6 +156,8 @@ first-block .icons i:nth-child(3) {
 
 header {
     display: flex;
+    position: fixed;
+    z-index: 1000;
     align-items: center;
     height: 50px;
     width: 100%;
@@ -204,17 +206,42 @@ nav:hover a {
     color: #575757;
 }
 
-nav:hover a:hover {
+nav:hover a:hover, nav a.active-nav{
     color: #8EAAFB;
     box-shadow: 0 2px 0 0 currentColor;
 }
 
 .left {
+    display: flex;
     margin-top: 10%;
     margin-left: 8%;
     opacity: 0;
     transform: translateY(150px);
     animation: slideUp 1s forwards 3.5s;
+}
+
+.fl {
+    display: flex;
+    flex-direction: column;
+}
+
+.fr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+}
+
+.fr img {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    transition: all 1s;
+}
+
+.fr img:hover {
+    scale: 1.1;
+    transform: rotate(20deg);
 }
 
 .left .devlop span:nth-child(1) {
@@ -246,6 +273,8 @@ nav:hover a:hover {
     opacity: 0;
     animation: slideUp 1s forwards 4s;
 }
+
+
 
 .left .plink {
     transform: translateY(150px);
@@ -282,7 +311,7 @@ nav:hover a:hover {
 }
 
 .discript {
-    max-width: 35%;
+    max-width: 45%;
     font-size: 40px;
     color: #99a1af;
     margin-top: 15px;
@@ -331,7 +360,7 @@ nav:hover a:hover {
 
 .plink {
     font-size: 45px;
-    margin-left: 4.5%;
+    margin-left: 8.5%;
 }
 
 .plink a {
@@ -475,30 +504,101 @@ nav:hover a:hover {
     border: none;
     border-radius: 15px;
     background: none;
-    
-
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    transform: scale(1);
 }
 
 .show_button_active {
     background: linear-gradient(90deg, rgba(86, 69, 214, 0.7) 0%, rgba(106,61,225,0.7) 35%, rgba(112, 39, 184, 0.7) 100%);
-    transition: all 1s;
-
+    transition: all 0.4s ease-in-out;
+    transform: scale(1.05);
 }
 
 .show_button:hover {
     background: linear-gradient(90deg, rgba(86, 69, 214, 0.5) 0%, rgba(105, 61, 225, 0.5) 35%, rgba(112, 39, 184, 0.5) 100%);
+    transform: scale(1.02);
 }
+
+/* Анимация для showcase */
+.portfolio_case, .shproject .shpcart, .shtechstack .tscart {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-in-out;
+}
+
+.portfolio_case.animate, .shproject .shpcart.animate, .shtechstack .tscart.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 
 .shproject {
     display: grid;
-    height: auto;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     margin: 8%;
     margin-top: 2%;
-    
 }
+
+.shtechstack {
+    display: grid;
+    width: 40%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 40px;
+    margin: 30%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+.shproject, .shtechstack {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    display: none;
+}
+
+.fade-out {
+    opacity: 0 !important;
+    transform: translateY(10px) !important;
+}
+
+.shproject.active, .shtechstack.active {
+    opacity: 1;
+    transform: translateY(0);
+    display: grid;
+}
+
+.tscart {
+    font-size: 100px;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 15% 0;
+    background: rgba(61, 61, 61, 0.5);
+    transition: all 0.5s;
+}
+
+.tscart:hover{
+    scale: 1.1;
+}
+
+
+
+.tscart span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tscart p {
+    font-size: 20px;
+    color: white;
+}
+
+
 
 .shpcart {
     width: 100%;
@@ -507,7 +607,11 @@ nav:hover a:hover {
     border-radius: 20px;
     background: rgba(41, 40, 65, 0.75);
     height: 80%;
+    transition: all 0.5s;
+}
 
+.shpcart:hover {
+    scale: 1.05;
 }
 
 .shpcart img{
@@ -534,4 +638,32 @@ nav:hover a:hover {
     font-size: 20px;
     color: #99a1af;
 
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    border-top: 1px solid #99a1af;
+    gap: 20px;
+    padding: 0 15%;
+    
+}
+.foticon {
+    display: flex;
+    gap: 25px;
+}
+
+footer a {
+    font-size: 50px;
+}
+
+footer h1 {
+    font-size: 20px;
+    color: #cecccc;
+}
+
+.foticons:hover {
+    scale: 1.1;
 }
