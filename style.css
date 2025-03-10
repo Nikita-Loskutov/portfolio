@@ -715,3 +715,13 @@ footer h1 {
 .foticons:hover {
     scale: 1.1;
 }
+
+@media screen and (max-width: 480px){
+        .fr {
+            display: none;
+        }
+
+        .user_icon {
+            display: none;
+        }
+}

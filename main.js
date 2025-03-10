@@ -177,4 +177,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener('resize', resizeCanvas);
     resizeCanvas();
+
+    // Smooth scroll for "Portfolio" and "Contacts" buttons
+    const portfolioButton = document.querySelector('.buttons a[href="#portfolio"]');
+    const contactsButton = document.querySelector('.buttons a[href="#contactsf"]');
+
+    if (portfolioButton) {
+        portfolioButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetSection = document.querySelector(portfolioButton.getAttribute('href'));
+            if (targetSection) {
+                window.scrollTo({
+                    top: targetSection.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    }
+
+    if (contactsButton) {
+        contactsButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetSection = document.querySelector(contactsButton.getAttribute('href'));
+            if (targetSection) {
+                window.scrollTo({
+                    top: targetSection.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    }
 });
