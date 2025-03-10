@@ -163,3 +163,20 @@ navLinks.forEach(link => {
     });
 });
 
+
+
+
+
+const showcaseButtons = document.querySelector(".showcase_button");
+
+function checkShowcaseButtonsAnimation() {
+    if (isElementInViewport(showcaseButtons)) {
+        showcaseButtons.classList.add("animate");
+    }
+}
+
+// Добавляем обработчик прокрутки
+window.addEventListener("scroll", checkShowcaseButtonsAnimation);
+
+// Запускаем проверку сразу при загрузке страницы
+checkShowcaseButtonsAnimation();

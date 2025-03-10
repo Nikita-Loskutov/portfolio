@@ -498,6 +498,17 @@ nav:hover a:hover, nav a.active-nav{
 
 }
 
+.showcase_button {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1s ease-in-out;
+}
+
+.showcase_button.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .show_button {
     padding: 20px 150px;
     font-size: 20px;
@@ -521,9 +532,12 @@ nav:hover a:hover, nav a.active-nav{
 }
 
 /* Анимация для showcase */
+
+
+
 .portfolio_case, .shproject .shpcart, .shtechstack .tscart {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(100px);
     transition: all 1s ease-in-out;
 }
 
@@ -607,7 +621,7 @@ nav:hover a:hover, nav a.active-nav{
     border-radius: 20px;
     background: rgba(41, 40, 65, 0.75);
     height: 80%;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 .shpcart:hover {
