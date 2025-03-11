@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 1500);
     }, 2500);
 
-    // Функция проверки видимости элемента
     function isElementInViewport(el) {
         const rect = el.getBoundingClientRect();
         return rect.top >= 0 && rect.left >= 0 &&
@@ -25,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
             rect.right <= (window.innerWidth || document.documentElement.clientWidth);
     }
 
-    // Анимация блоков "Обо мне"
     const aboutMeTitle = document.querySelector(".about_me_title");
     const aboutInfoText = document.querySelectorAll(".about_info_text");
     const aboutInfoImage = document.querySelector(".about_info_image");
@@ -42,7 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener('scroll', checkAnimation, { passive: true });
 
-    // Логика переключения кнопок
     const buttons = document.querySelectorAll('.show_button');
     buttons.forEach(button => {
         button.addEventListener('click', () => {
@@ -51,7 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Переключение между "Проекты" и "Стек технологий"
     const projectButton = document.getElementById("project");
     const techStackButton = document.getElementById("techstack");
     const projectBlock = document.getElementById("project_block");
@@ -80,7 +76,6 @@ document.addEventListener("DOMContentLoaded", () => {
         projectButton.classList.remove("show_button_active");
     });
 
-    // Анимация "Портфолио"
     const showcaseTitle = document.querySelector(".portfolio_case");
     const showcaseProjects = document.querySelectorAll(".shproject .shpcart");
     const showcaseTechStack = document.querySelectorAll(".shtechstack .tscart");
@@ -97,7 +92,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener("scroll", checkShowcaseAnimation, { passive: true });
 
-    // Навигация и активные ссылки
     const sections = document.querySelectorAll("main > div, footer");
     const navLinks = document.querySelectorAll("nav a");
 
@@ -130,7 +124,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Анимация showcase buttons
     const showcaseButtons = document.querySelector(".showcase_button");
 
     function checkShowcaseButtonsAnimation() {
@@ -142,7 +135,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", checkShowcaseButtonsAnimation, { passive: true });
     checkShowcaseButtonsAnimation();
 
-    // Анимация сетки canvas
     const canvas = document.getElementById('gridCanvas');
     const ctx = canvas.getContext('2d');
 
@@ -178,7 +170,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener('resize', resizeCanvas);
     resizeCanvas();
 
-    // Smooth scroll for "Portfolio" and "Contacts" buttons
     const portfolioButton = document.querySelector('.buttons a[href="#portfolio"]');
     const contactsButton = document.querySelector('.buttons a[href="#contactsf"]');
 
