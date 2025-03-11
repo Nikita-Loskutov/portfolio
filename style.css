@@ -717,6 +717,11 @@ footer h1 {
 }
 
 @media screen and (max-width: 480px){
+        .shproject, .shtechstack {
+            display: grid;
+            opacity: 1;
+            transform: translateY(0);
+        }
         header {
             display: none;
         }
