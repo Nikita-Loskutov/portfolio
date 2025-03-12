@@ -215,3 +215,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+projectButton.addEventListener("click", () => {
+    console.log("Project button clicked");
+    console.log("Adding class active to:", projectBlock);
+    switchSection(projectBlock, techStackBlock);
+});
