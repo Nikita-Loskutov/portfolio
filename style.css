@@ -673,8 +673,8 @@ nav:hover a:hover, nav a.active-nav{
 
 .shpcart h1 {
     background: linear-gradient(90deg, rgb(166, 166, 255), rgb(237, 227, 247), rgb(192, 155, 211));
-    /* -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-left: 5%;
 }
 
@@ -717,11 +717,6 @@ footer h1 {
 }
 
 @media screen and (max-width: 480px){
-        .shproject.active, .shtechstack.active {
-            opacity: 1;
-            transform: translateY(0);
-            display: grid;
-        }
         header {
             display: none;
         }
@@ -759,7 +754,7 @@ footer h1 {
             max-width: 90%;
             font-size: 25px;
         }
-        .portfolio_case h1 {
+        /* .portfolio_case h1 {
             font-size: 32px;
             margin: 0 auto;
         }
@@ -797,7 +792,7 @@ footer h1 {
             grid-row-gap: 15px;
             margin: 2.5%;
             margin-bottom: 5%;
-        }
+        } */
 
 
         footer {
