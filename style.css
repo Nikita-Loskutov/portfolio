@@ -768,6 +768,7 @@ footer h1 {
         .show_button {
             padding: 10px 20px;
             box-sizing: border-box;
+            flex-shrink: 0;
         }
         
         .shproject {
