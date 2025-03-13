@@ -758,7 +758,7 @@ footer h1 {
             font-size: 32px;
             margin: 0 auto;
         }
-        /*
+        
         .showcase_button {
             gap: 2%;
             width: 90%;
@@ -769,7 +769,7 @@ footer h1 {
             padding: 10px 20px;
             font-size: 20px;
         }
-
+        /*
         .shproject {
             grid-template-columns: repeat(1, 1fr);
             grid-column-gap: 0px;
