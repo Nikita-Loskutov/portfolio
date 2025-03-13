@@ -673,8 +673,8 @@ nav:hover a:hover, nav a.active-nav{
 
 .shpcart h1 {
     background: linear-gradient(90deg, rgb(166, 166, 255), rgb(237, 227, 247), rgb(192, 155, 211));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
     margin-left: 5%;
 }
 
