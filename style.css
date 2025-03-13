@@ -759,16 +759,15 @@ footer h1 {
             margin: 0 auto;
         }
         
-        /* .showcase_button {
+        .showcase_button {
             gap: 2%;
             width: 90%;
-            margin: auto;
             padding: 5px 0px;
         }
         .show_button {
             padding: 10px 20px;
             font-size: 20px;
-        } */
+        }
         
         .shproject {
             grid-template-columns: repeat(1, 1fr);
