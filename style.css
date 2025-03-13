@@ -754,11 +754,11 @@ footer h1 {
             max-width: 90%;
             font-size: 25px;
         }
-        /* .portfolio_case h1 {
+        .portfolio_case h1 {
             font-size: 32px;
             margin: 0 auto;
         }
-
+        /*
         .showcase_button {
             gap: 2%;
             width: 90%;
