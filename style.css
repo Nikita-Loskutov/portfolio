@@ -817,10 +817,12 @@ footer h1 {
         gap: 2%;
         width: 90%;
         margin: auto;
-        padding: 5px 0px;
+        padding: 0;
+        display: block; /* Изменение display для проверки */
     }
     .show_button {
-        padding: 0px; /* Further reduced padding */
+        padding: 0;
+        display: block; /* Изменение display для проверки */
     }
 
     .shproject {
