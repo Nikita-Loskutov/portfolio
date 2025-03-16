@@ -717,47 +717,102 @@ footer h1 {
 }
 
 @media screen and (max-width: 480px){
-    header {
-        display: none;
-    }
-    .fl {
-        display: flex;
-        margin: 0 auto;
-    }
-    .devlop span:nth-child(2) {
-        font-size: 55px;
-    }
-    .devlop span {
-        font-size: 60px;
-    }
+        header {
+            display: none;
+        }
+        .fl {
+            display: flex;
+            margin: 0 auto;
+        }
+        .devlop span:nth-child(2) {
+            font-size: 55px;
+        }
+        .devlop span {
+            font-size: 60px;
+        }
 
-    .language p {
-        font-size: 16px;
-        padding: 4px;
-        color: #99a1af;
-    }
-    .fr {
-        display: none;
-    }
+        .language p {
+            font-size: 16px;
+            padding: 4px;
+            color: #99a1af;
+        }
+        .fr {
+            display: none;
+        }
 
-    .user_icon {
-        display: none;
-    }
-    .discript {
-        max-width: 90%;
-        font-size: 30px;
-        margin-top: 15px;
-        margin-bottom: 15px;
-    }
-    .discript_about{
-        max-width: 90%;
-        font-size: 25px;
-    }
-    .portfolio_case h1 {
-        font-size: 32px;
-        margin: 0 auto;
-    }
-    
+        .user_icon {
+            display: none;
+        }
+        .discript {
+            max-width: 90%;
+            font-size: 30px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        
+        }
+        .discript_about{
+            max-width: 90%;
+            font-size: 25px;
+        }
+        .portfolio_case h1 {
+            font-size: 32px;
+            margin: 0 auto;
+        }
+        
+        .showcase_button {
+            gap: 2%;
+            width: 90%;
+            margin: auto;
+            padding: 5px 0px;
+        }
+        /* НЕ РАБОТАЕТ
+        .show_button {
+            padding: 10px 20px;
+        }
+        */
+
+        .shproject {
+            grid-template-columns: repeat(1, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 15px;
+            margin: 2%;
+        }
+        .shpcart {
+            height: 100%;
+        }
+        .shpcart h1 {
+            text-align: center;
+            margin-left: 0;
+            font-size: 30px;
+        }
+
+        .shtechstack {
+            width: 95%;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 5px;
+            grid-row-gap: 15px;
+            margin: 2.5%;
+            margin-bottom: 5%;
+        }
+
+
+        footer {
+            height: 100px;
+            padding: 0 2%;
+        }
+        .foticon {
+            gap: 8px;
+        }
+        footer a {
+            font-size: 35px;
+        }
+        footer h1 {
+            font-size: 14px;
+        }
+        
+}
+
+@media screen and (max-width: 480px) {
     .showcase_button {
         gap: 2%;
         width: 90%;
@@ -765,7 +820,7 @@ footer h1 {
         padding: 5px 0px;
     }
     .show_button {
-        padding: 5px 10px; /* Измененные значения padding */
+        padding: 2px 5px; /* Further reduced padding */
     }
 
     .shproject {
@@ -774,35 +829,11 @@ footer h1 {
         grid-row-gap: 15px;
         margin: 2%;
     }
-    .shpcart {
-        height: 100%;
-    }
-    .shpcart h1 {
-        text-align: center;
-        margin-left: 0;
-        font-size: 30px;
-    }
-
     .shtechstack {
         width: 95%;
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 5px;
         grid-row-gap: 15px;
         margin: 2.5%;
-        margin-bottom: 5%;
-    }
-
-    footer {
-        height: 100px;
-        padding: 0 2%;
-    }
-    .foticon {
-        gap: 8px;
-    }
-    footer a {
-        font-size: 35px;
-    }
-    footer h1 {
-        font-size: 14px;
     }
 }
