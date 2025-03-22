@@ -26,7 +26,7 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    pointer-events: none; /* Чтобы Canvas не мешал кликам */
+    pointer-events: none;
 }
 
 .first-block {
@@ -448,7 +448,7 @@ nav:hover a:hover, nav a.active-nav{
     width: 350px;
     height: auto;
     transform: translateX(0px);
-    border-radius: 50%; /* если нужно круглое изображение */
+    border-radius: 50%;
     box-shadow: 5px 5px 120px 8px rgba(193, 71, 204, 0.6);
 }
 
@@ -476,7 +476,7 @@ nav:hover a:hover, nav a.active-nav{
 
 }
 
-/* New animation styles */
+
 .about_me_title, .about_info_text, .about_info_image {
     opacity: 0;
     transition: all 1.0s ease;
@@ -564,7 +564,6 @@ nav:hover a:hover, nav a.active-nav{
     transform: scale(1.02);
 }
 
-/* Анимация для showcase */
 
 
 
@@ -810,32 +809,4 @@ footer h1 {
             font-size: 14px;
         }
         
-}
-
-@media screen and (max-width: 480px) {
-    .showcase_button {
-        gap: 2%;
-        width: 90%;
-        margin: auto;
-        padding: 0;
-        display: block; /* Изменение display для проверки */
-    }
-    .show_button {
-        padding: 0;
-        display: block; /* Изменение display для проверки */
-    }
-
-    .shproject {
-        grid-template-columns: repeat(1, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 15px;
-        margin: 2%;
-    }
-    .shtechstack {
-        width: 95%;
-        grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 5px;
-        grid-row-gap: 15px;
-        margin: 2.5%;
-    }
 }

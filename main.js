@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 1500);
     }, 2500);
 
-    // Функция проверки видимости элемента
+
     function isElementInViewport(el) {
         const rect = el.getBoundingClientRect();
         return rect.top >= 0 && rect.left >= 0 &&
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
             rect.right <= (window.innerWidth || document.documentElement.clientWidth);
     }
 
-    // Анимация блоков "Обо мне"
+
     const aboutMeTitle = document.querySelector(".about_me_title");
     const aboutInfoText = document.querySelectorAll(".about_info_text");
     const aboutInfoImage = document.querySelector(".about_info_image");
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener('scroll', checkAnimation, { passive: true });
 
-    // Логика переключения кнопок
+
     const buttons = document.querySelectorAll('.show_button');
     buttons.forEach(button => {
         button.addEventListener('click', () => {
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Переключение между "Проекты" и "Стек технологий"
+
     const projectButton = document.getElementById("project");
     const techStackButton = document.getElementById("techstack");
     const projectBlock = document.getElementById("project_block");
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
         projectButton.classList.remove("show_button_active");
     });
 
-    // Анимация "Портфолио"
+
     const showcaseTitle = document.querySelector(".portfolio_case");
     const showcaseProjects = document.querySelectorAll(".shproject .shpcart");
     const showcaseTechStack = document.querySelectorAll(".shtechstack .tscart");
