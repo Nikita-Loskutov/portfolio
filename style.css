@@ -664,7 +664,7 @@ nav:hover a:hover, nav a.active-nav{
 }
 
 .shpcart:hover {
-    scale: 1.04;
+    scale: 1.03;
     border: 2px solid rgba(149, 44, 158, 0.4);
 }
 
