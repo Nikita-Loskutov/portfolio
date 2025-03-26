@@ -97,7 +97,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 showcaseTitle.classList.add("animate");
                 showcaseProjects.forEach(item => item.classList.add("animate"));
                 showcaseTechStack.forEach(item => item.classList.add("animate"));
-                console.log("Showcase animation added");
             });
         }
     }
@@ -214,6 +213,22 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
+    document.getElementById("lines").addEventListener("click", () => {
+        const burger = document.getElementById("burger");
+        const lines = document.getElementById("lines");
+        lines.style.scale = "1.3"
+        burger.classList.toggle("active");
+    });
+    
+    // Закрытие бургер-меню при клике вне его
+    document.addEventListener("click", (event) => {
+        const burger = document.getElementById("burger");
+        const lines = document.getElementById("lines");
+    
+        if (!burger.contains(event.target) && !lines.contains(event.target)) {
+            burger.classList.remove("active");
+        }
+    });
 });
 
 projectButton.addEventListener("click", () => {
@@ -221,3 +236,9 @@ projectButton.addEventListener("click", () => {
     console.log("Adding class active to:", projectBlock);
     switchSection(projectBlock, techStackBlock);
 });
+
+
+
+
+
+
