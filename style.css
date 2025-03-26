@@ -599,11 +599,12 @@ nav:hover a:hover, nav a.active-nav{
 
 .shtechstack {
     display: grid;
-    width: 40%;
+    justify-content: center;
+    width: 80%;
+    margin: 10%;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 20px;
     grid-row-gap: 40px;
-    margin: 30%;
     margin-top: 2%;
     margin-bottom: 5%;
 }
@@ -636,7 +637,7 @@ nav:hover a:hover, nav a.active-nav{
 }
 
 .tscart:hover{
-    scale: 1.07;
+    scale: 1.05;
 }
 
 
@@ -800,7 +801,6 @@ footer h1 {
             margin: 2.5%;
             margin-bottom: 5%;
         }
-
 
         footer {
             height: 100px;
