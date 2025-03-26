@@ -519,9 +519,8 @@ nav:hover a:hover, nav a.active-nav{
 
 .showcase_button {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap: 10%;
     border: 2px solid black;
     border-radius: 15px;
     width: 65%;
@@ -543,7 +542,7 @@ nav:hover a:hover, nav a.active-nav{
 }
 
 .show_button {
-    padding: 20px 150px;
+    padding: 2% 6%;
     font-size: 20px;
     border: none;
     border-radius: 15px;
@@ -563,8 +562,6 @@ nav:hover a:hover, nav a.active-nav{
     background: linear-gradient(90deg, rgba(86, 69, 214, 0.5) 0%, rgba(105, 61, 225, 0.5) 35%, rgba(112, 39, 184, 0.5) 100%);
     transform: scale(1.02);
 }
-
-
 
 
 .portfolio_case, .shproject .shpcart, .shtechstack .tscart {
@@ -765,9 +762,7 @@ footer h1 {
             padding: 5px 0px;
         }
 
-        .show_button {
-            padding: 10px 20px;
-        }
+
        
 
         .shproject {
