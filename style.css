@@ -600,8 +600,8 @@ nav:hover a:hover, nav a.active-nav{
 .shtechstack {
     display: grid;
     justify-content: center;
-    width: 80%;
-    margin: 10%;
+    width: 60%;
+    margin: 20%;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 20px;
     grid-row-gap: 40px;
@@ -724,6 +724,45 @@ footer h1 {
     scale: 1.1;
 }
 
+
+@media screen and (max-width: 1024px){
+    .fr {
+        width: 50%;
+    }
+    .discript {
+        max-width: 65%;
+    }
+    .user_icon {
+        margin-right: 5%;
+    }
+}
+@media screen and (max-width: 768px){
+    .fr {
+        display: none;
+    }
+    .discript {
+        max-width: 70%;
+        font-size: 42px;
+    }
+    .about_info_image {
+        display: none;
+    }
+    .discript_about {
+        max-width: 80%;
+    }
+    .shpcart {
+        height: 100%;
+    }
+    .shpcart h1 {
+        font-size: 30px;
+    }
+    .shtechstack {
+        width: 75%;
+        margin: 12.5%;
+    }
+}
+
+
 @media screen and (max-width: 480px){ 
         #lines {
             display: block;
@@ -815,31 +854,29 @@ footer h1 {
         footer h1 {
             font-size: 14px;
         }
-        
-}
-@media screen and (max-width: 480px){
-    #burger {
-        opacity: 0;
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 50px;
-        right: 0px;
-        background: rgba(0, 0, 0, 0.384);
-        backdrop-filter: blur(5px);
-        padding: 20px;
-        border-radius: 0px 0px 0px 10px;
-        transition: all 0.5s;
-        pointer-events: none;
-    }
-    #burger a {
-        padding: 10px;
-        text-decoration: none;
-    }
-    #burger.active {
-        opacity: 1;
-        pointer-events: auto;
-    }
+
+        #burger {
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 50px;
+            right: 0px;
+            background: rgba(0, 0, 0, 0.384);
+            backdrop-filter: blur(5px);
+            padding: 20px;
+            border-radius: 0px 0px 0px 10px;
+            transition: all 0.5s;
+            pointer-events: none;
+        }
+        #burger a {
+            padding: 10px;
+            text-decoration: none;
+        }
+        #burger.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
 }
 
 
