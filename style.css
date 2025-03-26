@@ -363,6 +363,7 @@ nav:hover a:hover, nav a.active-nav{
     font-size: 24px;
     margin: 30px;
     margin-left: 0;
+    margin-right: 0px;
     
 }
 
@@ -589,12 +590,11 @@ nav:hover a:hover, nav a.active-nav{
 
 
 .shproject {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
     margin: 8%;
-    margin-top: 2%;
+    margin-top: 3%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
 }
 
 .shtechstack {
@@ -734,7 +734,6 @@ footer h1 {
 
         .fl {
             display: flex;
-            margin: 0 auto;
         }
         .devlop span:nth-child(2) {
             font-size: 55px;
@@ -778,22 +777,19 @@ footer h1 {
             padding: 5px 0px;
         }
 
-
-       
-
-        .shproject {
+        /* .shproject {
             grid-template-columns: repeat(1, 1fr);
             grid-column-gap: 0px;
             grid-row-gap: 15px;
             margin: 2%;
-        }
+        } */
         .shpcart {
             height: 100%;
         }
         .shpcart h1 {
             text-align: center;
             margin-left: 0;
-            font-size: 30px;
+            font-size: 28px;
         }
 
         .shtechstack {
