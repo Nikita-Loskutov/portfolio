@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("DOMContentLoaded event fired");
 
     const firstBlock = document.getElementById("first_block");
     const mainBlock = document.getElementById("main_block");
@@ -59,7 +58,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const projectBlock = document.getElementById("project_block");
     const techStackBlock = document.getElementById("techstack_block");
 
-    console.log("Initial state: Adding active class to projectBlock");
     projectBlock.classList.add("active");
     projectButton.classList.add("show_button_active");
 
@@ -68,19 +66,16 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
             hideBlock.classList.remove("active", "fade-out");
             showBlock.classList.add("active");
-            console.log(`Switched to section: ${showBlock.id}`);
         }, 400);
     }
 
     projectButton.addEventListener("click", () => {
-        console.log("Project button clicked");
         switchSection(projectBlock, techStackBlock);
         projectButton.classList.add("show_button_active");
         techStackButton.classList.remove("show_button_active");
     });
 
     techStackButton.addEventListener("click", () => {
-        console.log("TechStack button clicked");
         switchSection(techStackBlock, projectBlock);
         techStackButton.classList.add("show_button_active");
         projectButton.classList.remove("show_button_active");
@@ -232,8 +227,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 projectButton.addEventListener("click", () => {
-    console.log("Project button clicked");
-    console.log("Adding class active to:", projectBlock);
     switchSection(projectBlock, techStackBlock);
 });
 
